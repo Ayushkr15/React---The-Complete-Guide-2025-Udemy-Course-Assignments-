@@ -4,7 +4,7 @@ export default function Result({
   annualInvestment,
   formatter,
 }) {
-  console.log(results);
+  //console.log(results);
 
   return (
     <table id="result">
