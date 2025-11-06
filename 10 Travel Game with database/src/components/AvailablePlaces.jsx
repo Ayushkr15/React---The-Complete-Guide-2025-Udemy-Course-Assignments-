@@ -28,9 +28,8 @@ export default function AvailablePlaces({ onSelectPlace }) {
         setError({
           message: error.message || "Could not fetch places try again later",
         });
+        setIsFetching(false);
       }
-
-      setIsFetching(false);
     }
     fetchPlaces();
   }, []);
@@ -45,7 +44,7 @@ export default function AvailablePlaces({ onSelectPlace }) {
       places={availablePlaces}
       isLoading={isFetching}
       loadingText="Fetching place data..."
-     // fallbackText="No places available."
+      fallbackText="No places available."
       onSelectPlace={onSelectPlace}
     />
   );
